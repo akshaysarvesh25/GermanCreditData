@@ -109,7 +109,7 @@ def main():
     error = np.sum(error, axis=0)
     error = error/iterations
 
-    plot1,= plt.plot(Train_data_numbers,error,'b.',label='Logistic regression error')
+    plot1,= plt.plot(Train_data_numbers,(error/y_test.shape[0]),'b.',label='Logistic regression error')
     plt.grid()
     plt.xlabel('Samples')
     plt.ylabel('Training error')
